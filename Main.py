@@ -119,7 +119,7 @@ def train(load = True):
         for actor in actors:
             actor.flush(t)
 
-        if t - last_save > 2000:
+        if t - last_save > 4000000:
             AUX.saver([value_network,policy_network],save_path)
             last_save = t
 
